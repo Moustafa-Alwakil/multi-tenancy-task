@@ -18,7 +18,7 @@ class GetUserQuery
     public function getMerchants(): Collection|array
     {
         return User::query()
-            ->role('merchant')
+            ->role(User::MERCHANT)
             ->with('tenant')
             ->get();
     }
@@ -27,7 +27,7 @@ class GetUserQuery
     {
         return User::query()
             ->where('tenant_id', $merchant->tenant_id)
-            ->role('user')
+            ->role(User::USER)
             ->with('tenant')
             ->get();
     }

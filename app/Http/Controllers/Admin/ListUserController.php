@@ -13,7 +13,7 @@ class ListUserController extends Controller
     public function __invoke(Request $request, $merchant_id)
     {
         $merchant = User::query()
-            ->role('merchant')
+            ->role(User::MERCHANT)
             ->where('id', $merchant_id)
             ->firstOrFail();
 

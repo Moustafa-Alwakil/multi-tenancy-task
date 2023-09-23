@@ -186,6 +186,6 @@ return [
         // 'Example' => App\Facades\Example::class,
     ])->toArray(),
 
-    'base_domain' => env('BASE_DOMAIN', 'multi-tenancy.test')
+    'base_domain' => env('BASE_DOMAIN')
 
 ];
