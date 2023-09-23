@@ -2,18 +2,18 @@
 
 ## Theoretical questions
 
--- What is SaaS?
+-- What is SaaS?\
 -- SaaS stands for software as a service which is provided by third party and many users can use this service on a subscription basis. 
 
--- Does a SaaS-Webapp require the multi-database approach?
+-- Does a SaaS-Webapp require the multi-database approach?\
 -- No, it can be single database, anyway it depends on many factors such as the complexity of the app, the scalability and the business case itself. 
 
 
--- What is multi tenancy?
+-- What is multi tenancy?\
 -- Multi tenancy is a concept in software where a single software serves multiple clients.
 
 -- Which multi tenancy approach would you use for our project? (single or multi-
-database)?
+database)?\
 -- Single database approach.
 ___
 ## How you achieved multi-tenancy and how you separated the superadmin, merchant and user dashboard?
