@@ -9,10 +9,15 @@ use App\Actions\Tenant\User\GetUserQuery;
 
 class DashboardController extends Controller
 {
-    public function __invoke(Request $request)
+    public function merchant(Request $request)
     {
-        return Inertia::render('Tenant/Dashboard', [
+        return Inertia::render('Tenant/Merchant/Dashboard', [
             'users' => (new GetUserQuery(auth()->user(), $request))->getUsers()
         ]);
+    }
+
+    public function user(Request $request)
+    {
+        return Inertia::render('Tenant/User/Dashboard');
     }
 }

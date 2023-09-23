@@ -17,7 +17,8 @@ use App\Http\Controllers\Tenant\DashboardController;
 */
 
 Route::middleware(['role:' . User::MERCHANT . '|' . User::USER, 'auth'])->group(function () {
-    Route::get('/', DashboardController::class)->name('dashboard');
+    Route::get('/', [DashboardController::class, 'merchant'])->middleware('only_merchant')->name('dashboard');
+    Route::get('/user-dashboard', [DashboardController::class, 'user'])->name('user-dashboard');
     Route::post('logout', [AuthController::class, 'logout']);
 });
 

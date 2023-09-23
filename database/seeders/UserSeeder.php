@@ -16,7 +16,7 @@ class UserSeeder extends Seeder
     {
         $superAdmin = User::query()->create([
             'name' => fake()->name(),
-            'email' => "super_admin@gmail.com",
+            'email' => "super_admin@test.com",
             'password' => bcrypt(123123123),
         ]);
 
@@ -25,7 +25,7 @@ class UserSeeder extends Seeder
         foreach (Tenant::all() as $tenant) {
             $merchant = User::query()->create([
                 'name' => fake()->name(),
-                'email' => "tenant_merchant_$tenant->id@gmail.com",
+                'email' => "tenant_merchant_$tenant->id@test.com",
                 'password' => bcrypt(123123123),
                 'tenant_id' => $tenant->id
             ]);
@@ -35,7 +35,7 @@ class UserSeeder extends Seeder
             for ($i = 1; $i <= 100; $i++) {
                 $user = User::query()->create([
                     'name' => fake()->name(),
-                    'email' => "tenant_user_{$tenant->id}_$i@gmail.com",
+                    'email' => "tenant_user_{$tenant->id}_$i@test.com",
                     'password' => bcrypt(123123123),
                     'tenant_id' => $tenant->id
                 ]);

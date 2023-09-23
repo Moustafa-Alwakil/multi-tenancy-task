@@ -14,7 +14,7 @@ const logout = () => router.post('/logout')
 
 <template>
   <Layout>
-    <Head title="Welcome" />
+    <Head title="Dashboard" />
     <div class="text-center mt-5">
         <button class="btn btn-warning" @click="logout">Logout</button>
     </div>
